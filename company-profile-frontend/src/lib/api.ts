@@ -41,9 +41,9 @@ export async function fetchAPI<T>(
     }
 
     return await res.json();
-  } catch (error: any) {
+  } catch (error) {
     clearTimeout(id);
-    if (error.name === "AbortError") {
+    if (error instanceof Error && error.name === "AbortError") {
       console.warn(`Fetch API Timeout for ${url}`);
       throw new Error(`API request timed out after ${timeout}ms`);
     }

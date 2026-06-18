@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   let article: Article | null = null;
   try {
     article = await fetchAPI<Article>(`articles/${params.slug}`);
-  } catch (e) {
+  } catch {
     article = mockArticles[params.slug] || null;
   }
 
@@ -97,7 +97,7 @@ export default async function ArticleDetailPage({ params }: { params: Params }) 
 
   try {
     article = await fetchAPI<Article>(`articles/${params.slug}`);
-  } catch (e) {
+  } catch {
     article = mockArticles[params.slug] || null;
   }
 

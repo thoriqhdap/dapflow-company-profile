@@ -31,13 +31,13 @@ export default async function HomePage() {
 
   try {
     services = await fetchAPI<Service[]>("services");
-  } catch (e) {
+  } catch {
     services = mockServices;
   }
 
   try {
     testimonials = await fetchAPI<Testimonial[]>("testimonials");
-  } catch (e) {
+  } catch {
     testimonials = mockTestimonials;
   }
 

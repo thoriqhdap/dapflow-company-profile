@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Calendar, Tag } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { fetchAPI } from "@/lib/api";
 import { Article } from "@/types";
 
@@ -20,7 +20,7 @@ export default async function BlogPage() {
 
   try {
     articles = await fetchAPI<Article[]>("articles");
-  } catch (e) {
+  } catch {
     articles = mockArticles;
   }
 

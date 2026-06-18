@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Award, Compass, Eye, ShieldCheck, Users } from "lucide-react";
+import { Award, Compass, Eye, ShieldCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata = {

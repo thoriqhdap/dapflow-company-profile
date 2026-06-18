@@ -47,7 +47,7 @@ export default function ContactPage() {
       });
       setSubmitSuccess(true);
       form.reset();
-    } catch (e: any) {
+    } catch (e) {
       console.error(e);
       // Fallback for demo when backend is offline
       setSubmitSuccess(true);

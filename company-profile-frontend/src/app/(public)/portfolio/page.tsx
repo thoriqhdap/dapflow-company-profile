@@ -19,7 +19,7 @@ export default async function PortfolioPage() {
 
   try {
     portfolio = await fetchAPI<Portfolio[]>("portfolio");
-  } catch (e) {
+  } catch {
     portfolio = mockPortfolio;
   }
 

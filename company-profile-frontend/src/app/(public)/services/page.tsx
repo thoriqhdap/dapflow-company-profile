@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code, Layers, Sparkles, Database, Shield, Monitor, Smartphone, Cpu } from "lucide-react";
+import { Code, Layers, Sparkles, Database, Shield, Smartphone, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetchAPI } from "@/lib/api";
@@ -24,7 +24,7 @@ export default async function ServicesPage() {
 
   try {
     services = await fetchAPI<Service[]>("services");
-  } catch (e) {
+  } catch {
     services = mockServices;
   }
 
